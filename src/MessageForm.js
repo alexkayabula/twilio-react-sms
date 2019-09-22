@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MessageForm.css';
+import { notify } from 'react-notify-toast';
 
 class MessageForm extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class MessageForm extends Component {
   onSubmit(event) {
     event.preventDefault();
     this.setState({ submitting: true });
+
     fetch('/api/messages', {
       method: 'POST',
       headers: {
@@ -37,11 +39,13 @@ class MessageForm extends Component {
               body: ''
             }
           });
+          notify.show('Message Sent', 'success', 5000); 
         } else {
           this.setState({
             error: true,
             submitting: false
           });
+          notify.show('Sending Failed', 'error', 5000);
         }
       });
   }
