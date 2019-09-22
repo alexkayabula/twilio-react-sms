@@ -2,7 +2,7 @@
     text-align: left;
     padding: 1em;
     outline: 2px solid white;
-    height: 390px;
+    height: 430px;
   }
   .sms-form label {
     display: block;
@@ -21,7 +21,7 @@
     width: 100%;
     height: 45px;
     box-sizing: border-box;
-    background-color: rgb(43, 138, 226);
+    background-color: rgba(43, 255, 0, 0.712);
     color: white;
   }
   .sms-form.error {
