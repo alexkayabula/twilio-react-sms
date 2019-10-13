@@ -1,5 +1,5 @@
 ### Twilio-React-SMS
-- An application that allows users to send SMS.
+- Send SMS using Twilio and react .
 
 #### Technologies
 - Twilio
